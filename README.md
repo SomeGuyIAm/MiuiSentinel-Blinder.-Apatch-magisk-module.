@@ -1,5 +1,6 @@
 # MiuiSentinel-Blinder.-Apatch-magisk-module.
-A simple module for HyperOS 3 users with Root Access, that may "blind" MiuiSentinel. Comes with instructions.
+A simple module for HyperOS 3 users with Root Access, that may "blind" MiuiSentinel. Comes with instructions if something goes wrong.
+
 🛡️ Defeating HyperSentinel: A Guide to "Blinding" the Memory Watchdog (Android 16 / HyperOS 3)
 The Problem: On new Xiaomi devices, the HyperSentinel component (formerly MIUISentinel) aggressively kills heavy processes (emulators like Winlator/Mobox, AAA games) once they exceed a PSS threshold of approximately 3.5 GB. Attempts to kill the Sentinel process itself result in a total system freeze (Deadlock), as the OS waits for its response.
 The Solution: We do not remove Sentinel. Instead, we "blind" its monitoring function. It stays active to satisfy system dependencies (preventing freezes), but it loses the ability to see memory overflows and send the "Signal 9" kill command.
